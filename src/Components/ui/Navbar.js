@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Navbar() {
+export default function Navbar({NameActive = "Unknown"}) {
   const classes = useStyles();
 
   return (
@@ -28,7 +28,7 @@ export default function Navbar() {
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"><MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>News</Typography>
+          <Typography variant="h6" className={classes.title}>{NameActive}</Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
